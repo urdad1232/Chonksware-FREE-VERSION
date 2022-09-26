@@ -1,0 +1,222 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Chonksware V1", HidePremium = false,IntroText = "Chonksware V1", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+-- tabs
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local ScriptsTab = Window:MakeTab({
+	Name = "Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PaidScriptsTab = Window:MakeTab({
+	Name = "Paid Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local HatUniTab = Window:MakeTab({
+	Name = "Hat Universe FE",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local DiscordTab = Window:MakeTab({
+	Name = "Discord",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local CreditsTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+
+
+-- buttons
+
+MainTab:AddButton({
+	Name = "Rejoin",
+	Callback = function()
+        local ts = game:GetService("TeleportService")
+
+        local p = game:GetService("Players").LocalPlayer
+        
+         
+        
+        ts:Teleport(game.PlaceId, p)
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Fly",
+	Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/WxmvCLLH'),true))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "AntiAfk",
+	Callback = function()
+        local vu = game:GetService("VirtualUser")
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+            wait(1)
+            vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+        end)
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+            Title = "Chonksware V1";
+            Text = "AntiAFK has loaded!";
+            Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 16;
+  	end    
+})
+
+DiscordTab:AddButton({
+	Name = "Copy link to Discord",
+	Callback = function()
+        setclipboard("https://discord.gg/CpqqxtabjD")
+        toclipboard("https://discord.gg/CpqqxtabjD")
+
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+            Title = "Chonksware V1";
+            Text = "Copied link to clipboard!";
+            Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 16;
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "Infinite Yield FE",
+	Callback = function()
+      		loadstring(Game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "Pendulum FE",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "Syntax V3 FE",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Main", true))()
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "Simplity",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplity1/main/main"))()
+  	end    
+})
+
+PaidScriptsTab:AddButton({
+	Name = "Buy FEnix NOT MY SCRIPT",
+	Callback = function()
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+            Title = "Chonksware V1";
+            Text = "Discord copied to clipboard";
+            Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 16;
+
+        setclipboard("https://discord.gg/hNdKrBER")
+        toclipboard("https://discord.gg/hNdKrBER")
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Die",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-826.593445, -169.284576, -62.0862885, -0.632599056, 0.108669199, -0.766817749, 1.9737314e-09, 0.990107238, 0.140312567, 0.774479449, 0.0887615979, -0.626340926)
+  	end    
+})
+
+HatUniTab:AddButton({
+	Name = "NetLess",
+	Callback = function()
+            -- when you reset make sure to re-execute this or just make this execute in a loop
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(-30,0,0)
+    end)
+    end
+    end
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "Netless Ran";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 16;
+  	end    
+})
+
+HatUniTab:AddButton({
+	Name = "Run netless before you run this",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/4B4fktPS", true))()
+  	end    
+})
+
+PaidScriptsTab:AddButton({
+	Name = "Buy HatHub",
+	Callback = function()
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+            Title = "Chonksware V1";
+            Text = "Copied to clipboard";
+            Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 16;
+
+        setclipboard("https://discord.gg/hathub")
+        toclipboard("https://discord.gg/hathub")
+  	end    
+})
+
+
+-- Labels
+
+HatUniTab:AddLabel("You need 10 hats on!!!")
+
+CreditsTab:AddLabel("Made by empathy#6900")
+
+
+
+
+
+print("Script Ran!")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
+print("i love you:)")
